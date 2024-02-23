@@ -159,7 +159,6 @@ sudo su - root << EOF
 
 cat > /etc/nginx/sites-available/${instancia_add}-frontend << 'END'
 server {
-  listen 8080;
   server_name $frontend_hostname;
 
   location / {
