@@ -240,7 +240,6 @@ backend_nginx_setup() {
 sudo su - root << EOF
 cat > /etc/nginx/sites-available/${instancia_add}-backend << 'END'
 server {
-  listen 8080;
   server_name $backend_hostname;
   location / {
     proxy_pass http://127.0.0.1:${backend_port};
